@@ -84,5 +84,5 @@ for i in range(n):
                 sind=i
                 eind=j
 print(str[sind:eind+1])
-INPUT: my madam's mothers tongue is malayalam                                                                                                
+INPUT: my madam's mother tongue is malayalam                                                                                                
 OUTPUT:malayalam 
