@@ -1,0 +1,12 @@
+There are 5 employees get the max salary
+a=list(map(int,input().split()))
+count=0
+while True:
+    b=a.index(max(a))
+    for i in range(len(a)):
+        if(i!=b):
+            a[i]+=1
+    count+=1
+    if(len(set(a))==1):
+        print(count)
+        break
