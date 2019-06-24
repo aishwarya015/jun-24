@@ -50,3 +50,39 @@ n=int(input())
 m=int(input())
 c=n & m
 print (bin(c).count('1'))
+
+PALINDROME WITHOUT REVERSE:
+def is_palindrome(s):
+    if len(s) < 1:
+        return True
+    else:
+        if s[0] == s[-1]:
+            return is_palindrome(s[1:-1])
+        else:
+            return False
+a=str(input(""))
+if(is_palindrome(a)==True):
+    print("String is a palindrome!")
+else:
+    print("String isn't a palindrome!")
+    
+PALINDROME FOR A STRING OF INPUT:
+str=input()
+n=len(str)
+sind=eind=0
+for i in range(n):
+    for j in range(n-1,i,-1):
+        ind1=i
+        ind2=j
+        while ind1<ind2:
+            if str[ind1]!=str[ind2]:
+                break
+            ind1+=1
+            ind2-=1
+        if ind1>=ind2:
+            if j-i>eind-sind:
+                sind=i
+                eind=j
+print(str[sind:eind+1])
+INPUT: my madam's mothers tongue is malayalam                                                                                                
+OUTPUT:malayalam 
