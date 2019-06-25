@@ -87,9 +87,24 @@ print(str[sind:eind+1])
 INPUT: my madam's mother tongue is malayalam                                                                                                
 OUTPUT:malayalam 
  
-FREQUENCY SORT:
+FREQUENCY SORT:ERROR
 from collections import Counter 
 ini_list =list(input().split(" ")) 
 print ("initial list", str(ini_list)) 
 result = sorted(ini_list, key = ini_list.count) 
 print("final list", str(result)) 
+  OR
+    import operator
+from collections import OrderedDict 
+li=list(map(int,input().split()))
+d=OrderedDict()
+for i in li:
+    if i not in d:
+        d[i]=1
+    else:
+        d[i]+=1
+sorted_d = sorted(d.items(), key=operator.itemgetter(1))
+for i in sorted_d:
+    for j in range(i[1]):
+        print(i[0],end=" ")
+
