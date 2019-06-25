@@ -86,3 +86,10 @@ for i in range(n):
 print(str[sind:eind+1])
 INPUT: my madam's mother tongue is malayalam                                                                                                
 OUTPUT:malayalam 
+ 
+FREQUENCY SORT:
+from collections import Counter 
+ini_list =list(input().split(" ")) 
+print ("initial list", str(ini_list)) 
+result = sorted(ini_list, key = ini_list.count) 
+print("final list", str(result)) 
