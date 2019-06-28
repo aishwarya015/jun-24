@@ -107,4 +107,50 @@ sorted_d = sorted(d.items(), key=operator.itemgetter(1))
 for i in sorted_d:
     for j in range(i[1]):
         print(i[0],end=" ")
+        
+        
+        
+#include <stdio.h>
 
+int main() 
+{
+    char str[1000];
+    int count=0,i=0;
+    scanf("%s",str);
+    while(str[i])
+    {
+        count++;
+        if(str[i]!=str[i+1])
+        {
+            printf("%d%c",count,str[i]);
+            count=0;
+        }
+        i++;
+    }
+    return 0;
+}
+ip=aaabb
+op=3a2b
+
+#include <stdio.h>
+
+int main() 
+{
+    char str[1000];
+    int count=0,i=0;
+    scanf("%s",str);
+    while(str[i])
+    {
+        if(str[i]<='9' && str[i]>='0')
+            count=count*10+str[i]-'0';
+        else
+        {
+            while(count--)
+               printf("%c",str[i]);
+            count=0; 
+        }
+        i++;
+    }
+}
+ip=3a2b
+op=aaabb
